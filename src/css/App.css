@@ -1,0 +1,147 @@
+@font-face {
+  font-family: Recoleta;
+  src: url(fonts/Recoleta-Black.ttf);
+}
+@font-face {
+  font-family: Inter;
+  src: url(fonts/Inter.ttf);
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0 0 60px 0;
+  padding: 0;
+  width: 100%;
+  font-size: 1em;
+  background-color: #fff;
+  color: #000;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+hr {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Search Bars */
+.search-txt{
+  width: 15vw;
+  padding: 0 20px;
+  font-size: 1em;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+.submit{
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: 65px;
+}
+.submit img {
+  width: 25px;
+}
+
+/* Homepage */
+main {
+  padding: 0 1.25em;
+  margin: 10px auto 20px;
+  max-width: 1288px;
+}
+.section-title {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-top: 50px;
+  font-weight: 900;
+}
+.section-title h2 {
+  font-size: 2em;
+  padding: 0 3px;
+  background: linear-gradient(to bottom, transparent 60%,  #ffd700 40%);
+}
+.section-title hr {
+  flex-grow: 2;
+}
+.section-title a {
+  color: #000;
+  font-size: 0.8em;
+  white-space: nowrap;
+}
+
+/* Category Pages */
+.category-title h2 {
+  font-weight: 900;
+  font-size: 2.5em;
+  padding: 0 3px;
+  background: linear-gradient(to bottom, transparent 60%,  #ffd700 40%);
+}
+.open {
+  margin-bottom: 80px;
+}
+
+/* Search Results Page */
+.search-title h2 {
+  font-weight: 900;
+  font-size: 2.5em;
+  padding: 0 3px;
+  background: linear-gradient(to bottom, transparent 60%,  #ffd700 40%);
+}
+.search-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  font-size: 0.8em;
+}
+.main-search {
+  padding: 8px 0;
+  border-radius: 0;
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  outline: none;
+}
+.main-search .search-txt{
+  flex-grow: 1;
+  padding: 0;
+  font-size: 2em;
+}
+.search-data select {
+  padding: 8px;
+}
+.no-results {
+  padding: 40px 0 15px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.show-more {
+  cursor: pointer;
+  padding: 10px;
+  margin: 50px auto 0;
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #000;
+  display: flex;
+  align-self: center;
+}
+
+@media (min-width: 600px) {
+  .active {
+      font-weight: 800;
+      padding-bottom: 9px;
+      border-bottom: 3px solid #000;
+  }
+
+  main {
+      padding: 0 40px;
+  }
+}
