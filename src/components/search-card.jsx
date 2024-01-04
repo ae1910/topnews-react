@@ -2,7 +2,7 @@ import { StyledSearchCards } from "./styles/searchcards.styles";
 
 const SearchCards = (result) => {
     return ( 
-        <StyledSearchCards className="search-card" href={result.result.url}>
+        <StyledSearchCards className="search-card" href={result.result.url} target="_blank">
             <p className="search-date">{`${new Date(result.result.publishedAt).toLocaleString('default', { month: 'long' })} ${new Date(result.result.publishedAt).getDate()}, ${new Date(result.result.publishedAt).getFullYear()}`}</p>
             <div className="card-info">
                 <div className="search-metadata">

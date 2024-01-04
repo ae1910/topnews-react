@@ -1,11 +1,10 @@
-import { Link } from "react-router-dom";
 import { StyledSlider } from "./styles/slider.styles";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 const SliderItem = (article) => {
     return (
-        <Link className="slider-item" to={{pathname: article.article?.url}} target="_blank">
+        <a className="slider-item" href={article.article?.url} target="_blank">
             <div className="slide-image" style={{backgroundImage: `url(${article.article.urlToImage})`}}></div>
             <div className="metadata">
                 <div>
@@ -15,7 +14,7 @@ const SliderItem = (article) => {
                 <h1>{article.article?.title}</h1>
                 {!article.article?.description ? <></> : <p className="slider-description">{article.article.description}</p>}
             </div>
-        </Link>
+        </a>
     );
 }
 

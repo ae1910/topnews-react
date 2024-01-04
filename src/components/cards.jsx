@@ -4,7 +4,7 @@ const Cards = (item) => {
     return ( 
         <StyledCards className="article-grid">
             {item.item?.slice(0,1).map((article, i) =>
-                <a className="main-card" href={article.url} key={i}>
+                <a className="main-card" href={article.url} key={i} target="_blank">
                     <div className="card-metadata">
                         <div className="card-top-row">
                             {!article.source.name ? <></> : <p className="source-name">{article.source?.name}</p>}

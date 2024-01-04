@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
-import { useSearchParams, useLocation } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import search from '../img/icons8-search-30.png';
 import SearchCards from "../components/search-card";
 
 const Results = () => {
-    const { state } = useLocation();
     const [text, setText] = useState("");
     const [currentList, setCurrentList] = useState(10);
     const [jsonArr, setJsonArr] = useState();

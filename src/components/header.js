@@ -12,6 +12,7 @@ const Header = () => {
     const buttonRef = useRef(null);
     const [text, setText] = useState();
     const [width, setWidth] = useState(window.innerWidth);
+
     
     const handleOutsideClick = (event) => {
         if (
@@ -73,13 +74,13 @@ const Header = () => {
             )} 
 
             <Navbar open={open} width={width} menuRef={menuRef} text={text} setText={setText} handleSubmit={handleSubmit}>
-                <NavItem path='/category/general' text='General' setOpen={setOpen} width={width}/>
-                <NavItem path='/category/business' text='Business' setOpen={setOpen} width={width}/>
-                <NavItem path='/category/entertainment' text='Entertainment' setOpen={setOpen} width={width}/>
-                <NavItem path='/category/health' text='Health' setOpen={setOpen} width={width}/>
-                <NavItem path='/category/science' text='Science' setOpen={setOpen} width={width}/>
-                <NavItem path='/category/sports' text='Sports' setOpen={setOpen} width={width}/>
-                <NavItem path='/category/technology' text='Technology' setOpen={setOpen} width={width}/>
+                <NavItem path='/category/general' text='General' setOpen={setOpen} width={width} pathname={pathname}/>
+                <NavItem path='/category/business' text='Business' setOpen={setOpen} width={width} pathname={pathname}/>
+                <NavItem path='/category/entertainment' text='Entertainment' setOpen={setOpen} width={width} pathname={pathname}/>
+                <NavItem path='/category/health' text='Health' setOpen={setOpen} width={width} pathname={pathname}/>
+                <NavItem path='/category/science' text='Science' setOpen={setOpen} width={width} pathname={pathname}/>
+                <NavItem path='/category/sports' text='Sports' setOpen={setOpen} width={width} pathname={pathname}/>
+                <NavItem path='/category/technology' text='Technology' setOpen={setOpen} width={width} pathname={pathname}/>
             </Navbar>
             <hr></hr>
         </StyledHeader>
@@ -114,8 +115,8 @@ function NavItem(props) {
     return (
         <li>
             {props.width >= 600 ?
-                <Link className="nav-item" to={props.path}>{props.text}</Link>
-            :   <Link className="nav-item" to={props.path} onClick={() => props.setOpen(false)} onBlur={() => props.setOpen(false)} onFocus={() =>props.setOpen(true)}>{props.text}</Link>
+                <Link className={props.pathname === props.path ? "nav-item active" : "nav-item"} to={props.path}>{props.text}</Link>
+            :   <Link className={props.pathname === props.path ? "nav-item active" : "nav-item"} to={props.path} onClick={() => props.setOpen(false)} onBlur={() => props.setOpen(false)} onFocus={() =>props.setOpen(true)}>{props.text}</Link>
             }
         </li>
     )
